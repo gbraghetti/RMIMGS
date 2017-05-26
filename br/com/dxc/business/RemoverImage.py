@@ -1,5 +1,6 @@
 import docker
 #from br.com.dxc.teste.DockerFake import DockerFake
+from br.com.dxc.teste.Teste import Teste
 
 # import pdb; pdb.set_trace() --> modo interativo de DEBUG
 
@@ -7,26 +8,28 @@ import docker
 # client = docker.DockerClient(base_url="tcp://192.168.99.100:2376")
 
 '''
-Imagens reais alocadas no Vagrant'''
+Imagens reais alocadas no Vagrant
 
 client = docker.DockerClient(base_url='unix://var/run/docker.sock')
 imagesDocker = client.images
+'''
 
+teste = Teste()
 
 def deleteNones():
     print("###### deletar nones #########")
-    #for image in DockerFake.list():
-    for image in imagesDocker.list():
+    for image in teste.list():
+    #for image in imagesDocker.list():
         if '<none>:<none>' in image.attrs["RepoTags"]:
             #DockerFake.remove(image.short_id, force=True)
-            imagesDocker.remove(image.short_id, force=True)
+            Teste.remove(image.short_id, force=True)
             print(image.attrs["RepoTags"])
 
 
 listNomes = []
 def addInList():
-    #for img in DockerFake.list():
-    for img in imagesDocker.list():
+    for img in teste.list():
+    #for img in imagesDocker.list():
         listNomes.append(img.attrs["RepoTags"].__str__())
     print("*****************")
 
@@ -46,8 +49,8 @@ def formatNameImg():
 listData = []
 def searchName(listFormatNameImg):
     for i in range(len(listFormatNameImg)):
-        #listImagensDebian = DockerFake.list(listFormatNameImg[i])
-        listImagensDebian = imagesDocker.list(listFormatNameImg[i])
+        listImagensDebian = teste.list(listFormatNameImg[i])
+        #listImagensDebian = imagesDocker.list(listFormatNameImg[i])
         for img in listImagensDebian:
             print("######## IMAGENS")
             print(img)
@@ -71,7 +74,9 @@ def deleteAll(plistData):
 #print(imagesDocker.list("amov/nginx"))
 #print("######## ALL")
 
-for img in imagesDocker.list():
-    print(img.attrs["Created"])
+'''def listaImagesDocker():
+    for img in imagesDocker.list():
+        print(img.attrs["Created"])
+        '''
 
 

@@ -5,7 +5,6 @@ class Teste(object):
 
     def __init__(self):
         self.popularListJenkinsDockers()
-        self.consultarLista()
 
     def list(self):
         return self.listaDockerImgs

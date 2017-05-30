@@ -17,13 +17,19 @@ imagesDocker = client.images.list()
 teste = Teste()
 
 def deleteNones():
-    print("###### deletar nones #########")
+    print("###### DELETAR NONES #########")
     for image in teste.list():
     #for image in imagesDocker.list():
-        if '<none>:<none>' in image.attrs["RepoTags"]:
+        print("Repotags: %s + Short_id %s" %(image.repotags, image.short_id))
+        #teste.remove("46807d3de55c")
+        if ("<none>:<none>".replace(" ","") == image.repotags.replace(" ", "")):
+            print(image.repotags.replace(" ", ""))
+        #if '<none>:<none>' in image.attrs["RepoTags"]:
             #DockerFake.remove(image.short_id, force=True)
-            Teste.remove(image.short_id, force=True)
-            print(image.attrs["RepoTags"])
+            print("###### REMOVENDO NONE ######")
+            teste.remove(image.short_id)
+            #print(image.attrs["RepoTags"])
+
 
 
 listNomes = []
@@ -53,7 +59,6 @@ def formatNameImg():
 def searchName():
     listData = []
     listImgCreated = []
-    print("#entrou")
     for i in range(0, len(listNameFormated)):
         listImagensDebian = teste.list(listNameFormated[i])
         #listImagensDebian = imagesDocker.list(listFormatNameImg[i])
@@ -70,20 +75,13 @@ def deleteAll(plistData):
     dock = DockerFake()
     if len(plistData) > 1:
         for i in range(1, len(plistData)):
-            print(i)
+            #print(i)
             dock = plistData[0][1]
-            print(dock)
-            print(dock[0].short_id)
-            #teste.remove(plistData[i].short)
+            #print(dock)
+            #print(dock[0].short_id)
+            teste.remove(dock[0].short_id)
 
 
-
-
-
-'''def listaImagesDocker():
-    for img in imagesDocker.list():
-        print(img.attrs["Created"])
-        '''
 
 def listaNomes():
     for img in listNomes:
@@ -93,8 +91,20 @@ def listaNameFormated():
     for img in listNameFormated:
         print(img)
 
+print("###### LISTA INICIAL #######")
+print("")
+teste.consultarLista()
+print("")
+print("###### FIM LISTA INICIAL ######")
+deleteNones()
 addInList()
 formatNameImg()
 searchName()
 
+
+print("###### LISTA FINAL #######")
+print("")
+teste.consultarLista()
+print("")
+print("###### FIM LISTA FINAL ######")
 

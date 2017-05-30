@@ -3,8 +3,6 @@
   <component name="ChangeListManager">
     <list default="true" id="19962518-793e-4a2a-b67a-4466008bbd31" name="Default" comment="">
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/br/com/dxc/business/RemoverImage.py" afterPath="$PROJECT_DIR$/br/com/dxc/business/RemoverImage.py" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/br/com/dxc/teste/Coisas" afterPath="$PROJECT_DIR$/br/com/dxc/teste/Coisas" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/br/com/dxc/teste/DockerFake.py" afterPath="$PROJECT_DIR$/br/com/dxc/teste/DockerFake.py" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/br/com/dxc/teste/Teste.py" afterPath="$PROJECT_DIR$/br/com/dxc/teste/Teste.py" />
     </list>
     <option name="EXCLUDED_CONVERTED_TO_IGNORED" value="true" />
@@ -20,11 +18,11 @@
   </component>
   <component name="FileEditorManager">
     <leaf SIDE_TABS_SIZE_LIMIT_KEY="300">
-      <file leaf-file-name="RemoverImage.py" pinned="false" current-in-tab="false">
+      <file leaf-file-name="RemoverImage.py" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/br/com/dxc/business/RemoverImage.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="353">
-              <caret line="75" column="12" lean-forward="false" selection-start-line="75" selection-start-column="12" selection-end-line="75" selection-end-column="12" />
+            <state relative-caret-position="361">
+              <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
               <folding>
                 <element signature="e#0#13#0" expanded="true" />
               </folding>
@@ -55,7 +53,7 @@
       <file leaf-file-name="DockerFake.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/br/com/dxc/teste/DockerFake.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="85">
+            <state relative-caret-position="-30">
               <caret line="5" column="65" lean-forward="false" selection-start-line="5" selection-start-column="65" selection-end-line="5" selection-end-column="65" />
               <folding />
             </state>
@@ -72,13 +70,13 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="Teste.py" pinned="false" current-in-tab="true">
+      <file leaf-file-name="Teste.py" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/br/com/dxc/teste/Teste.py">
           <provider selected="true" editor-type-id="text-editor">
-            <state relative-caret-position="404">
-              <caret line="309" column="72" lean-forward="true" selection-start-line="309" selection-start-column="72" selection-end-line="309" selection-end-column="72" />
+            <state relative-caret-position="293">
+              <caret line="307" column="39" lean-forward="false" selection-start-line="307" selection-start-column="39" selection-end-line="307" selection-end-column="39" />
               <folding>
-                <element signature="e#1180#2828#0" expanded="false" />
+                <element signature="e#1403#3051#0" expanded="false" />
               </folding>
             </state>
           </provider>
@@ -419,18 +417,17 @@
   </component>
   <component name="ToolWindowManager">
     <frame x="1592" y="-8" width="1936" height="1056" extended-state="6" />
-    <editor active="true" />
     <layout>
       <window_info id="Project" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22547974" sideWeight="0.49452055" order="0" side_tool="false" content_ui="combo" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Event Log" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="true" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.18617614" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.27201784" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" x="1631" y="213" width="1876" height="481" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Python Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
-      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.32998884" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.39957717" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
-      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" show_stripe_button="true" weight="0.22547974" sideWeight="0.50547945" order="2" side_tool="true" content_ui="tabs" />
+      <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.22547974" sideWeight="0.50547945" order="2" side_tool="true" content_ui="tabs" />
       <window_info id="Data View" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" show_stripe_button="true" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
@@ -520,7 +517,7 @@
         <state relative-caret-position="306">
           <caret line="19" column="33" lean-forward="false" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
           <folding>
-            <element signature="e#1180#2828#0" expanded="false" />
+            <element signature="e#1403#3051#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -548,7 +545,7 @@
         <state relative-caret-position="323">
           <caret line="19" column="33" lean-forward="true" selection-start-line="19" selection-start-column="33" selection-end-line="19" selection-end-column="33" />
           <folding>
-            <element signature="e#1180#2828#0" expanded="false" />
+            <element signature="e#1403#3051#0" expanded="false" />
           </folding>
         </state>
       </provider>
@@ -668,14 +665,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/br/com/dxc/teste/DockerFake.py">
-      <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="85">
-          <caret line="5" column="65" lean-forward="false" selection-start-line="5" selection-start-column="65" selection-end-line="5" selection-end-column="65" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/br/com/dxc/teste/Coisas">
       <provider selected="true" editor-type-id="text-editor">
         <state relative-caret-position="272">
@@ -684,22 +673,30 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/br/com/dxc/business/RemoverImage.py">
+    <entry file="file://$PROJECT_DIR$/br/com/dxc/teste/DockerFake.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="353">
-          <caret line="75" column="12" lean-forward="false" selection-start-line="75" selection-start-column="12" selection-end-line="75" selection-end-column="12" />
-          <folding>
-            <element signature="e#0#13#0" expanded="true" />
-          </folding>
+        <state relative-caret-position="-30">
+          <caret line="5" column="65" lean-forward="false" selection-start-line="5" selection-start-column="65" selection-end-line="5" selection-end-column="65" />
+          <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/br/com/dxc/teste/Teste.py">
       <provider selected="true" editor-type-id="text-editor">
-        <state relative-caret-position="404">
-          <caret line="309" column="72" lean-forward="true" selection-start-line="309" selection-start-column="72" selection-end-line="309" selection-end-column="72" />
+        <state relative-caret-position="293">
+          <caret line="307" column="39" lean-forward="false" selection-start-line="307" selection-start-column="39" selection-end-line="307" selection-end-column="39" />
           <folding>
-            <element signature="e#1180#2828#0" expanded="false" />
+            <element signature="e#1403#3051#0" expanded="false" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/br/com/dxc/business/RemoverImage.py">
+      <provider selected="true" editor-type-id="text-editor">
+        <state relative-caret-position="361">
+          <caret line="30" column="25" lean-forward="true" selection-start-line="30" selection-start-column="25" selection-end-line="30" selection-end-column="25" />
+          <folding>
+            <element signature="e#0#13#0" expanded="true" />
           </folding>
         </state>
       </provider>

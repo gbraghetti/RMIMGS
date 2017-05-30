@@ -3,7 +3,7 @@ import random
 class DockerFake(object):
     repotags = None
 
-    def __init__(self, repotags, short_id, created):
+    def __init__(self, repotags=None, short_id=None, created=None):
         self.repotags = repotags
         self.short_id = short_id
         self.created = created

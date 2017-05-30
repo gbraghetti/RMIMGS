@@ -1,5 +1,5 @@
 import docker
-#from br.com.dxc.teste.DockerFake import DockerFake
+from br.com.dxc.teste.DockerFake import DockerFake
 from br.com.dxc.teste.Teste import Teste
 
 # import pdb; pdb.set_trace() --> modo interativo de DEBUG
@@ -49,26 +49,32 @@ def formatNameImg():
     return listNameFormated
 
 
-listData = []
-def searchName(formatNameImg):
-    for i in range(len(formatNameImg)):
-        listImagensDebian = teste.list(formatNameImg[i])
+
+def searchName():
+    listData = []
+    listImgCreated = []
+    print("#entrou")
+    for i in range(0, len(listNameFormated)):
+        listImagensDebian = teste.list(listNameFormated[i])
         #listImagensDebian = imagesDocker.list(listFormatNameImg[i])
         for img in listImagensDebian:
-            print("######## IMAGENS")
-            print(img)
+            #print(img)
             #listData.append(([img.attrs["Created"]], [img]))
             listData.append(([img.created], [img]))
-        listData.sort(reverse=True)
-    print(listData)
-        #print("Permanecera: ")
-        #print(listData[0])
-        #deleteAll(listData)
+            listImgCreated.append(img.created)
+        sorted(listData, key=lambda ld: ld[0], reverse=True)
+        deleteAll(listData)
+        listData = []
 
 def deleteAll(plistData):
+    dock = DockerFake()
     if len(plistData) > 1:
         for i in range(1, len(plistData)):
-            print("Removendo %d %s" % (i, plistData[i]))
+            print(i)
+            dock = plistData[0][1]
+            print(dock)
+            print(dock[0].short_id)
+            #teste.remove(plistData[i].short)
 
 
 
@@ -89,5 +95,6 @@ def listaNameFormated():
 
 addInList()
 formatNameImg()
-searchName(formatNameImg())
+searchName()
+
 

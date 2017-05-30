@@ -8,3 +8,10 @@ import datetime
             ).strftime('%Y-%m-%d %H:%M:%S')
         )'''
 
+sorted(gustavo, key= lambda g: g[0], reverse=True)
+>>> for dt, obj in gustavo:
+...     print obj.id
+
+
+gustavo[0][1].short_id
+        print(listData[0][1][0])

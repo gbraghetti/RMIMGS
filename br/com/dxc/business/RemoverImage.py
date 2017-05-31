@@ -16,9 +16,10 @@ imagesDocker = client.images.list()
 
 teste = Teste()
 
-def deleteNones():
+def deleteNones2():
     print("###### DELETAR NONES #########")
     for image in teste.list():
+
     #for image in imagesDocker.list():
         print("Repotags: %s + Short_id %s" %(image.repotags, image.short_id))
         #teste.remove("46807d3de55c")
@@ -32,6 +33,16 @@ def deleteNones():
 
 
 
+def deleteNones():
+    print("###### DELETAR NONES #########")
+    for image in [images for images in teste.list()
+                  if "<none>:<none>".replace(" ", "") == images.repotags.replace(" ", "")]:
+        print("Repotags: %s + Short_id %s" % (image.repotags, image.short_id))
+        print(image.repotags.replace(" ", ""))
+        print("###### REMOVENDO NONE ######")
+        teste.listaDockerImgs.remove(image)
+    print(len(teste.listaDockerImgs))
+
 listNomes = []
 def addInList():
     for img in teste.list():
@@ -39,6 +50,7 @@ def addInList():
         #listNomes.append(img.attrs["RepoTags"].__str__())
         listNomes.append(img.repotags.replace(" ", ""))
     print("*****************")
+    print("listnomes %d" %len(listNomes))
 
 listNameFormated = []
 def formatNameImg():
@@ -52,21 +64,17 @@ def formatNameImg():
         else:
             listNameFormated.append(nomeAdd[0].replace("[u'", ""))
         nomeAdd = []
+    print("listnameformated %d" % len(listNameFormated))
     return listNameFormated
 
 
 
 def searchName():
     listData = []
-    listImgCreated = []
     for i in range(0, len(listNameFormated)):
         listImagensDebian = teste.list(listNameFormated[i])
-        #listImagensDebian = imagesDocker.list(listFormatNameImg[i])
         for img in listImagensDebian:
-            #print(img)
-            #listData.append(([img.attrs["Created"]], [img]))
             listData.append(([img.created], [img]))
-            listImgCreated.append(img.created)
         sorted(listData, key=lambda ld: ld[0], reverse=True)
         deleteAll(listData)
         listData = []
@@ -75,10 +83,7 @@ def deleteAll(plistData):
     dock = DockerFake()
     if len(plistData) > 1:
         for i in range(1, len(plistData)):
-            #print(i)
             dock = plistData[0][1]
-            #print(dock)
-            #print(dock[0].short_id)
             teste.remove(dock[0].short_id)
 
 

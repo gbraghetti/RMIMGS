@@ -15,3 +15,11 @@ sorted(gustavo, key= lambda g: g[0], reverse=True)
 
 gustavo[0][1].short_id
         print(listData[0][1][0])
+
+    def deleteNones(self):
+        print("###### DELETAR NONES #########")
+        for image in self.imagesDocker.list():
+            print("Repotags: %s + Short_id %s" %(image.attrs["RepoTags"], image.short_id))
+            if '<none>:<none>' in image.attrs["RepoTags"]:
+                print("###### REMOVENDO NONE ######")
+                self.imagesDocker.remove(image, force=True)

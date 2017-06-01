@@ -187,17 +187,17 @@ class Teste(object):
         self.listaDockerImgs.append(df)
         df = DockerFake("5.16.50.225:5000/amov/prometheus     :<none>", "13be5a618846", "1472574752")
         self.listaDockerImgs.append(df)
-        df = DockerFake( "registry.amov.dxc/amov/prometheus    :<none>", "13be5a618846", "1492761953")
+        df = DockerFake("registry.amov.dxc/amov/prometheus    :<none>", "13be5a618846", "1492761953")
         self.listaDockerImgs.append(df)
-        df = DockerFake( "5.16.50.225:5000/amov/prometheus     :<none>", "72d8da6d2b62", "1492761654")
+        df = DockerFake("5.16.50.225:5000/amov/prometheus     :<none>", "72d8da6d2b62", "1492761654")
         self.listaDockerImgs.append(df)
         df = DockerFake( "registry.amov.dxc/amov/prometheus    :<none>", "72d8da6d2b62", "1490644155")
         self.listaDockerImgs.append(df)
-        df = DockerFake( "5.16.50.225:5000/amov/prometheus     :<none>", "ad00dde47db0","1472574756")
+        df = DockerFake("5.16.50.225:5000/amov/prometheus     :<none>", "ad00dde47db0","1472574756")
         self.listaDockerImgs.append(df)
-        df = DockerFake( "registry.amov.dxc/amov/prometheus    :<none>", "ad00dde47db0","1490644157")
+        df = DockerFake("registry.amov.dxc/amov/prometheus    :<none>", "ad00dde47db0","1490644157")
         self.listaDockerImgs.append(df)
-        df = DockerFake( "5.16.50.225:5000/amov/grafana        :latest", "63e71ce2eba2"	,"1472574758")
+        df = DockerFake("5.16.50.225:5000/amov/grafana        :latest", "63e71ce2eba2"	,"1472574758")
         self.listaDockerImgs.append(df)
         df = DockerFake("amov/grafana                         :latest", "63e71ce2eba2"	,"1472574759")
         self.listaDockerImgs.append(df)
@@ -325,3 +325,5 @@ class Teste(object):
 if __name__ == '__main__':
     teste = Teste()
     print(teste.list("amov/ish"))
+
+

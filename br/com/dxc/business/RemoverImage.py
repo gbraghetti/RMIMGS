@@ -3,8 +3,6 @@ from br.com.dxc.teste.DockerFake import DockerFake
 from br.com.dxc.teste.Teste import Teste
 
 # import pdb; pdb.set_trace() --> modo interativo de DEBUG
-
-
 # client = docker.DockerClient(base_url="tcp://192.168.99.100:2376")
 
 '''
@@ -30,8 +28,6 @@ def deleteNones2():
             print("###### REMOVENDO NONE ######")
             teste.remove(image.short_id)
             #print(image.attrs["RepoTags"])
-
-
 
 def deleteNones():
     print("###### DELETAR NONES #########")
@@ -67,8 +63,6 @@ def formatNameImg():
     print("listnameformated %d" % len(listNameFormated))
     return listNameFormated
 
-
-
 def searchName():
     listData = []
     for i in range(0, len(listNameFormated)):
@@ -86,15 +80,6 @@ def deleteAll(plistData):
             dock = plistData[0][1]
             teste.remove(dock[0].short_id)
 
-
-
-def listaNomes():
-    for img in listNomes:
-        print(img)
-
-def listaNameFormated():
-    for img in listNameFormated:
-        print(img)
 
 print("###### LISTA INICIAL #######")
 print("")

@@ -36,7 +36,7 @@ def deleteNones2():
 def deleteNones():
     print("###### DELETAR NONES #########")
     for image in [images for images in teste.list()
-                  if "<none>:<none>".replace(" ", "") == images.repotags.replace(" ", "")]:
+                  if "<none>".replace(" ", "") in images.repotags.replace(" ", "")]:
         print("Repotags: %s + Short_id %s" % (image.repotags, image.short_id))
         print(image.repotags.replace(" ", ""))
         print("###### REMOVENDO NONE ######")

@@ -34,3 +34,31 @@ class DockerFake(object):
     def __str__(self):
         return "short_id = %s /repotags = %s /created = %s" %(self.short_id, self.repotags, self.created)
 
+
+import docker
+
+
+class DeleteImages(object):
+    client = docker.DockerClient(base_url='unix://var/run/docker.sock')
+    imagesDocker = client.images
+
+    def __init__(self):
+        # self.deleteNones()
+        self.listImages()
+
+    def deleteNones(self):
+        for image in [images for images in self.imagesDocker.list()
+                      if None or "<none>" in images.attrs["RepoTags"]]:
+            print("##### REMOVENDO IMAGEM %s" %image)
+            #self.imagesDocker.remove(image)  # , force=True)
+
+    def listImages(self):
+        for image in self.imagesDocker.list():
+            print("Repotags %s" % image.attrs["RepoTags"])
+            print("Short_id %d" % image.short_id)
+        print("Numero imagens: %d" % len(self.imagesDocker.list()))
+
+
+if __name__ == '__main__':
+    deleteImages = DeleteImages()
+

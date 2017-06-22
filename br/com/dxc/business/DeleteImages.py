@@ -7,11 +7,11 @@ class DeleteImages(object):
     listCloneDocker = []
 
     def __init__(self):
-        pass
+        #pass
         #self.deleteNones()
-        #self.addInList()
-        #self.formatNameImg()
-        #self.searchName()
+        self.organizeList()
+        self.addInList()
+        self.searchAndRemoveName()
 
     def deleteNones(self):
         print("###### DELETAR NONES #########")
@@ -21,31 +21,50 @@ class DeleteImages(object):
             print("###### REMOVENDO NONE ######")
             #self.imagesDocker.remove(image, force=True)
 
+    def listParaTeste(self):
+        listTeste = []
+        noneStr = "u'<none>:<none>'"
+
+        for images in self.imagesDocker.list():
+            if images.attrs["RepoTags"] is not None or noneStr not in images.attrs["RepoTags"].__str__().strip():
+                print("####images.attr[RepoTags]: %s" % images.attrs["RepoTags"])
+                listTeste.append(images)
+
+        return listTeste
+
+
     def organizeList(self):
-        for img in self.imagesDocker.list():
+        noneStr = "u'<none>:<none>'"
+        for img in [images for images in self.imagesDocker.list()
+                    if images.attrs["RepoTags"] is not None or noneStr not in images.attrs["RepoTags"].__str__().strip()]:
+            #print("####noneStr: %s" %noneStr)
+            print("####RepoTags: %s" %img.attrs["RepoTags"].__str__())
+        # for img in self.listParaTeste():
             if "," in img.attrs["RepoTags"].__str__():
                 auxiliar = img.attrs["RepoTags"].__str__().split(",")
                 for aux in auxiliar:
                     self.listCloneDocker.append(aux.strip())
             else:
                 self.listCloneDocker.append(img.attrs["RepoTags"].__str__().strip())
+        print(self.listCloneDocker)
 
     def addInList(self):
         for name in self.listCloneDocker:
             print(name)
-            print(name[::-1])
-            strAttrs = name[::-1]
-            print(strAttrs)
-            nmRepoTagsStr = strAttrs.split(":")
-
-            print(nmRepoTagsStr[0])
-            print(nmRepoTagsStr[0][::-1])
-            nmRepoTagsStr = nmRepoTagsStr[1][::-1].replace("[", "").replace("]", "").replace("u'", "")
-            print(nmRepoTagsStr)
-            self.listNomes.append(nmRepoTagsStr)
+            if name.count(":") > 1:
+                tagPosition = name.rfind(":")
+            else:
+                tagPosition = name.find(":")
+            print("####tagPosition %s" %tagPosition)
+            tagStr = name[tagPosition::]
+            nmRepoTagsChange = name.replace(tagStr, "")
+            print(nmRepoTagsChange)
+            nmRepoTagsChange = nmRepoTagsChange.replace("[", "").replace("]", "").replace("u'", "")
+            print(nmRepoTagsChange)
+            self.listNomes.append(nmRepoTagsChange)
         print("*****************")
 
-    def searchName(self):
+    def searchAndRemoveName(self):
         print("####len list nomes %s" % len(self.listNomes))
         listData = []
         for i in range(0, len(self.listNomes)):
@@ -72,6 +91,3 @@ class DeleteImages(object):
 
 if __name__ == '__main__':
     deleteImages = DeleteImages()
-
-    for img in deleteImages.imagesDocker.list():
-        print(img.attrs)

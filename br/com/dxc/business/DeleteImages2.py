@@ -6,8 +6,8 @@ imagesDocker = client.images
 def teste():
     for img in imagesDocker.list():
         print(img.attrs["RepoTags"])
-        print(img.attrs["RepoTags"].__str__()[::-1])
-        strAttrs = img.attrs["RepoTags"].__str__()[::-1]
+        print(str(img.attrs["RepoTags"][::-1]))
+        strAttrs = str(img.attrs["RepoTags"][::-1])
         print(strAttrs)
         nmRepoTagsStr = strAttrs.split(":")
 
@@ -22,7 +22,7 @@ def listParaTeste():
     noneStr = "u'<none>:<none>'"
 
     for images in imagesDocker.list():
-        if noneStr not in images.attrs["RepoTags"].__str__().strip():
+        if noneStr not in str(images.attrs["RepoTags"].strip()):
             listTeste.append(images)
 
     return listTeste
@@ -35,12 +35,12 @@ def organizeList():
     # print("####noneStr: %s" %noneStr)
     # print("####RepoTags: %s" %img.attrs["RepoTags"].__str__())
     for img in listParaTeste():
-        if "," in img.attrs["RepoTags"].__str__():
-            auxiliar = img.attrs["RepoTags"].__str__().split(",")
+        if "," in str(img.attrs["RepoTags"]):
+            auxiliar = str(img.attrs["RepoTags"]).split(",")
             for aux in auxiliar:
                 listCloneDocker.append(aux.strip())
         else:
-            listCloneDocker.append(img.attrs["RepoTags"].__str__().strip())
+            listCloneDocker.append(str(img.attrs["RepoTags"]).strip())
     print(listCloneDocker)
 
 listNomes = []

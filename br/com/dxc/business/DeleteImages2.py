@@ -84,13 +84,29 @@ def deleteAll(plistData):
             print("dock0 %s" %dock1[0].short_id)
             #self.imagesDocker.remove(dock1[0].attrs["RepoTags"].__str__().replace("[", "").replace("]", "").replace("u'", ""))#, force=True)
 
+def testeIdDuplicado():
+    #for image in [images for images in imagesDocker.list()
+                  #if (images.attrs["RepoTags"] is None)]:
+    for images in imagesDocker.list():
+        if (len(images.attrs["RepoTags"]) > 1):
+            print("AAAAAAAAAALEX")
+            print(images.attrs["RepoTags"])
+            print(images.attrs["Id"])
+
+
 #print(listParaTeste())
 #organizeList()
 #addInList();
 #searchAndRemoveName();
 
-print(imagesDocker.list("enois"))
+#print(imagesDocker.list("enois"))
 
-for img in imagesDocker.list():
-    print(img.attrs)
-    break;
+def qlq():
+    for img in imagesDocker.list("oraclelinux"):
+        print(img.attrs["RepoTags"])
+        print(img.attrs["Id"])
+        print(img.short_id)
+
+testeIdDuplicado()
+qlq()
+
